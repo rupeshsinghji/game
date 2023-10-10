@@ -10,6 +10,16 @@
 </head>
 
 <body>
+  <video id="video-background" autoplay loop muted>
+    <source src="1234.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- new code -->
+  <div class="main-div" >
+    <h1 class="logo">
+      IGNITION CHROME
+  </h1>
+  <!-- to here -->
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
     <div id="unity-loading-bar">
@@ -25,6 +35,7 @@
       <div id="unity-build-title">My Runner2</div>
     </div>
   </div>
+</div>
   <script>
 
     var container = document.querySelector("#unity-container");
