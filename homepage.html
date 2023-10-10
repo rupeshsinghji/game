@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignition Chrome - User Homepage</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <style>
+        @font-face {
+            font-family: 'Mokoto Glitch';
+            src: url("font\\Mokoto Glitch.ttf") format('ttf')
+                /* You should replace 'path/to/' with the actual path to your font files */
+
+        }
+
+        /* CSS for the entire page */
+        body {
+            font-family: 'Mokoto Glitch';
+            /* font-family: Arial, sans-serif; */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header containing game branding */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* User information container at the top right corner */
+        .user-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-align: right;
+            display: inline;
+        }
+
+        @media (max-width: 896px) {
+            .user-info {
+
+
+                display: none;
+            }
+
+        }
+
+        /* Photo slider container */
+        .slider {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            /* transition: transform 0.5s ease-in-out; */
+            animation: rotateImages 8s linear infinite;
+        }
+
+        /* Style for individual images */
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes rotateImages {
+
+            0% {
+                transform: translateX(0%);
+            }
+
+            50% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+
+        }
+
+        /* Play button */
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #0077FF;
+            color: #fff;
+            padding: 10px 20px;
+
+
+            cursor: pointer;
+        }
+
+
+        .box {
+            border-radius: 10%;
+
+            box-shadow: 0 0 15px var(--color);
+            background-color: antiquewhite;
+            border-color: aliceblue;
+            --color: white;
+            animation: border-a 1s ease-in-out 0s infinite alternate;
+        }
+
+        @keyframes border-a {
+            0% {
+                box-shadow: 0 0 10px var(--color);
+            }
+
+            100% {
+                box-shadow: 0 0 15px var(--color);
+            }
+        }
+
+        .subdiv1 {
+            height: 70%;
+            width: 100%;
+
+            background-color: #706c6c;
+            opacity: 0.85;
+            display: flex;
+
+            justify-content: center;
+        }
+
+        .subdiv2 {
+            background-color: antiquewhite;
+            height: 100%;
+            width: 90%;
+            border-radius: 10%;
+            overflow: hidden;
+        }
+
+        .div1 {
+            position: relative;
+            top: 7%;
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        footer {
+
+
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+       
+
+       
+
+        .border-light {
+            border-radius: 25%;
+            border-color: rgb(246, 243, 244);
+            border-width: 3px;
+            border-style: solid;
+            --color: #f801cf;
+            box-shadow: 0 0 25px var(--color);
+            animation: border-a 1s ease-in-out 0s infinite alternate;
+        }
+
+        .item {
+            height: auto;
+            width: auto;
+            color: rgb(19, 5, 54);
+            align-items: center;
+            margin: 10px;
+            border-radius: 20%;
+            font-size: 20px;
+            font-style: bold;
+            font-family: 'Mokoto Glitch', sans-serif;
+            text-align: center;
+            text-shadow:
+                -1px -1px 0 #f8e801,
+                1px -1px 0 #f801cf,
+                -1px 1px 0 #f801cf,
+                1px 1px 0 #f801cf;
+        }
+
+        .user-div {
+            position: absolute;
+            top: 1%;
+            right: 1%;
+            display: flex;
+            flex-direction: row;
+
+
+        }
+
+        .buttn {
+
+            height: 10%;
+            width: 20%;
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ignition Chrome</h1>
+    </header>
+    <div class="user-div">
+
+        <div class="user-info">
+
+            <div class="ud-div">
+                <div class="username item"><span>username</span></div>
+                <div class="userid item"><span>user id</span></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="div1">
+        <div class="subdiv1 box">
+            <div class="subdiv2">
+                <div class="slider">
+
+                    <img src="car2.jpg" alt="Image 2">
+                    <img src="car3.jpg" alt="Image 3">
+
+                </div>
+            </div>
+        </div>
+
+        <button class=" box buttn item play-button">Play</button>
+
+
+        <footer>
+            <p>&copy; 2023 Ignition Chrome.<br> All rights reserved.</p>
+        </footer>
+
+        
+        <script>
+                  function redirectToLink() {
+            // Replace 'your-link-here' with the URL you want to navigate to
+            window.location.href = 'gamepage.html';
+        }
+        document.querySelector(".play-button").addEventListener("click", redirectToLink);
+        </script>
+
+</body>
+
+</html>
